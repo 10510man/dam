@@ -11,6 +11,6 @@ for i in range(1,7):
     else:
         print('정답입니다.')
         print(i,'번 만에 답을 맞혔습니다.')
-        break
-if i == 6:
+
+if i != 6:
     print('실패! 컴퓨터가 생각한 숫자는', number,'입니다.')
