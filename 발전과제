@@ -1,0 +1,24 @@
+def sadari(n):
+    r = 0
+    c = n * 2 -1
+    while True:
+        sMap[r][c] = n
+        if r == 3:
+            break
+        if sMap[r][c-1] not in [' ', n]:
+            c -= 1
+        elif sMap[r][c+1] not in [' ', n]:
+            c += 1
+        elif sMap[r+1][c] not in [' ', n]:
+            r += 1
+    print('%d: %s' %(n, gift[c]))
+        
+sMap = [[' ', '#', ' ', '#', ' ', '#', ' '],
+        [' ', '#', '#', '#', ' ', '#', ' '],
+        [' ', '#', ' ', '#', '#', '#', ' '],
+        [' ', '#', ' ', '#', ' ', '#', ' ']]
+gift = [' ', '지우개', ' ', '꽝', ' ', '연필', ' ']
+
+sadari(1)
+sadari(2)
+sadari(3)
